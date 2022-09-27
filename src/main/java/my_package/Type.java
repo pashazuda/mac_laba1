@@ -1,2 +1,5 @@
-package my_package;public enum Type {
+package my_package;
+
+public enum Type {
+    ROME, ARABIC, NOTYPE
 }
