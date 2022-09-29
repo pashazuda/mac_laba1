@@ -13,10 +13,10 @@ public class Calculator {
                 (NumberIdentifier.isArabicNumber(subStr[0]) && NumberIdentifier.isRomanNumber(subStr[1]))) {
             throw new CalcException("Неверный формат чисел, используются одновременно разные системы счисления");
         }
-        if (input.contains("+")) { operator = "+";}
-        else if (input.contains("-")) { operator = "-";}
-        else if (input.contains("*")) { operator = "*";}
-        else if (input.contains("/")) { operator = "/";}
+        String[] operators = {"+", "-", "*", "/"};
+        for (String mo:operators) {
+            if (input.contains(mo)){ operator = mo;}
+        }
         ArabicCalcs ac = new ArabicCalcs();
         RomanCalcs rc = new RomanCalcs();
         return switch (calcType) {

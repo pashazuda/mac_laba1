@@ -2,7 +2,7 @@ package my_package;
 
 import java.util.HashMap;
 
-public class ArabicCalcs extends Calculations implements Operation{
+public class ArabicCalcs extends Calculations{
     private static final HashMap<String, Integer> arabicDict = new HashMap<>();
     static {
         arabicDict.put("1", 1);
@@ -20,31 +20,34 @@ public class ArabicCalcs extends Calculations implements Operation{
     public int arabicCalc(String num1, String num2, String operator){
         int a = arabicDict.get(num1);
         int b = arabicDict.get(num2);
-        return execute(a, b, operator);
+        return operation(a, b, operator);
     }
 
     @Override
     int addition(int a, int b) {
-        return a+b;
+        Operation operation = (x, y) -> x + y;
+        return operation.execute(a,b);
     }
 
     @Override
     int subtraction(int a, int b) {
-        return a-b;
+        Operation operation = (x, y) -> x - y;
+        return operation.execute(a,b);
     }
 
     @Override
     int multiplication(int a, int b) {
-        return a * b;
+        Operation operation = (x, y) -> x * y;
+        return operation.execute(a,b);
     }
 
     @Override
     int division(int a, int b) {
-        return a / b;
+        Operation operation = (x, y) -> x / y;
+        return operation.execute(a,b);
     }
 
-    @Override
-    public int execute(int a, int b, String operator) {
+    public int operation(int a, int b, String operator) {
         return switch (operator) {
             case "+" -> addition(a, b);
             case "-" -> subtraction(a, b);

@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08be9af9-9653-4cec-b5c5-1f42148fe547" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="08be9af9-9653-4cec-b5c5-1f42148fe547" name="Changes" comment="Готово">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my_package/ArabicCalcs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/ArabicCalcs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my_package/Calculations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/Calculations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my_package/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my_package/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my_package/NumberIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/NumberIdentifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my_package/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/Operation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my_package/RomanCalcs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/RomanCalcs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my_package/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my_package/Type.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,8 +97,17 @@
       <option name="presentableId" value="Default" />
       <updated>1664282776126</updated>
       <workItem from="1664282777650" duration="10458000" />
-      <workItem from="1664293260180" duration="2104000" />
+      <workItem from="1664293260180" duration="2263000" />
+      <workItem from="1664429926008" duration="2362000" />
     </task>
+    <task id="LOCAL-00001" summary="Готово">
+      <created>1664300133758</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664300133758</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +124,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="Готово" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -131,8 +138,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/my_package/Main.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="6" />
+          <line>9</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

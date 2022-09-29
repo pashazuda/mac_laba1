@@ -2,7 +2,7 @@ package my_package;
 
 import java.util.HashMap;
 
-public class RomanCalcs extends Calculations implements Operation{
+public class RomanCalcs extends Calculations{
     private static final HashMap<String, Integer> romeDict = new HashMap<>();
     static {
         romeDict.put("I", 1);
@@ -33,12 +33,16 @@ public class RomanCalcs extends Calculations implements Operation{
     public String romanCalc(String num1, String num2, String operator) throws CalcException {
         int a = romeDict.get(num1);
         int b = romeDict.get(num2);
-        int result = execute(a, b, operator);
+        int result = operation(a, b, operator);
         if (result <= 0) {
             throw new CalcException("В римской системе нет отрицательных чисел и нуля");
         }
         if ((10 < result) && (result < 100)) {
-            return (getKeyFromValue(extraRomeDict, a / 10) + getKeyFromValue(romeDict, a % 10));
+            if (romeDict.containsKey(getKeyFromValue(romeDict, result % 10))) {
+                return (getKeyFromValue(extraRomeDict, result / 10) + getKeyFromValue(romeDict, result % 10));
+            } else {
+                return getKeyFromValue(extraRomeDict, result / 10);
+            }
         } else return getKeyFromValue(romeDict, result);
     }
 
@@ -53,26 +57,30 @@ public class RomanCalcs extends Calculations implements Operation{
 
     @Override
     int addition(int a, int b) {
-        return a+b;
+        Operation operation = (x, y) -> x + y;
+        return operation.execute(a,b);
     }
 
     @Override
     int subtraction(int a, int b) {
-        return a-b;
+        Operation operation = (x, y) -> x - y;
+        return operation.execute(a,b);
     }
 
     @Override
     int multiplication(int a, int b) {
-        return a * b;
+        Operation operation = (x, y) -> x * y;
+        return operation.execute(a,b);
     }
 
     @Override
     int division(int a, int b) {
-        return a / b;
+        Operation operation = (x, y) -> x / y;
+        return operation.execute(a,b);
     }
 
-    @Override
-    public int execute(int a, int b, String operator) {
+
+    public int operation(int a, int b, String operator) {
         return switch (operator) {
             case "+" -> addition(a, b);
             case "-" -> subtraction(a, b);
